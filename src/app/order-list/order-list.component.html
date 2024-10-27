@@ -1,0 +1,38 @@
+<div class="order-list">
+    <h2>Order List</h2>
+    <button class="btn btn-danger" (click)="deleteSelectedOrders()" [disabled]="selectedOrders.size === 0">Delete Selected</button>
+    <button class="btn btn-primary" (click)="addOrder()">Add New Order</button>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>
+            <input type="checkbox" (change)="toggleSelectAll($event)" [checked]="areAllSelected()" />
+            Select All
+          </th>
+          <th>Order ID</th>
+          <th>Vendor</th>
+          <th>Order Amount</th>
+          <th>Order Number</th>
+          <th>Shop</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>
+            <input type="checkbox" (change)="toggleSelection(order.orderID)" [checked]="selectedOrders.has(order.orderID)" />
+          </td>
+          <td>{{ order.orderID }}</td>
+          <td>{{ order.vendor }}</td>
+          <td>{{ order.orderAmount | currency }}</td>
+          <td>{{ order.orderNumber }}</td>
+          <td>{{ order.shop }}</td>
+          <td>
+            <button class="btn btn-warning" (click)="editSelectedOrder(order.orderID)">Edit</button>
+            <button class="btn btn-danger" (click)="deleteOrder(order.orderID)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

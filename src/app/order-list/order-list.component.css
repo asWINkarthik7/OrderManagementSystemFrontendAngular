@@ -1,0 +1,57 @@
+.order-list {
+    margin: 20px;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .table th, .table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+  
+  .table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .btn {
+    margin: 10px 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .btn-danger {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .btn-warning {
+    background-color: #ffc107;
+    color: white;
+  }
+  
+  .btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
